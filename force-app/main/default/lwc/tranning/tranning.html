@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title ="Trading Details">
+        <lightning-record-edit-form object-api-name={TraningObjectApi}
+                                    onsuccess={handleSuccess}
+                                    density="Caompact"
+                                    >
+
+    <lightning-input-field field-name="Id" value={TraningID}></lightning-input-field> 
+    <lightning-input-field field-name={TraningNameField}></lightning-input-field>
+    <lightning-input-field field-name={TraningCoordinatetorField}></lightning-input-field> 
+    <lightning-input-field field-name={TraningTechnologyField}></lightning-input-field>  
+    <lightning-input-field field-name={TraningsField}></lightning-input-field>
+    <lightning-input-field field-name={TraningStartDateField}></lightning-input-field> 
+    <lightning-input-field field-name={TraningEndDateField}></lightning-input-field>  
+    <lightning-input-field field-name={TraningstatusField}></lightning-input-field>      
+           
+    <div class="slds-m-top_large slds-grid slds-grid_algin-centre slds-align-absoolute-centre">
+        <lightning-button style="margin-right: 10px;" lable="save"
+        variant="brand" type="submit"></lightning-button>
+        <lightning-button style="margin-right: 10px;" lable="Cancel"
+        variant="brand" type="cancel" onclick={handleCancel}></lightning-button>
+     </div>
+        
+    </lightning-record-edit-form>
+    </lightning-card>
+    
+</template>

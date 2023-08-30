@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title ="Pconsultant Details">
+        <lightning-record-edit-form object-api-name={PconsultantObjectApi}
+                                    onsuccess={handleSuccess}
+                                    density="Compact"
+                                    >
+     <lightning-input-field field-name="Id" value={PconsultantID}></lightning-input-field>
+     <lightning-input-field field-name={ConNameField} required ></lightning-input-field>
+     <lightning-input-field field-name={ConEmailField}></lightning-input-field>
+     <lightning-input-field field-name={ConDOJFiled}></lightning-input-field>
+     <lightning-input-field field-name={ConDOBFiled}></lightning-input-field>
+     <lightning-input-field field-name={ConAadharNUmberField}></lightning-input-field>
+     <lightning-input-field field-name={ConPANNumberField}></lightning-input-field>
+     <lightning-input-field field-name={ConPhoneFiled} required></lightning-input-field>
+     <lightning-input-field field-name={ConTypeField} onchange={handleChange}></lightning-input-field>
+     <lightning-input-field field-name={ConSupervisorField} value={PconsultantData}></lightning-input-field>
+     <lightning-input-field field-name={ConSupervisorEmailFiled}></lightning-input-field> 
+     <lightning-input-field field-name={ConStatusFiled}></lightning-input-field> 
+     
+     <div class="slds-m-top_large slds-grid slds-grid_algin-centre slds-align-absoolute-centre">
+        <lightning-button style="margin-right: 10px;" lable="save"
+        variant="brand" type="submit"></lightning-button>
+        <lightning-button style="margin-right: 10px;" lable="Cancel"
+        variant="brand" type="cancel" onclick={handleCancel}></lightning-button>
+     </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+
+     
+</template>
